@@ -1,11 +1,8 @@
 {
   "builds": [
     {
-      "src": "src/main.jsx",
-      "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "ls -R src/images && vite build"
-      }
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [{ "src": "/(.*)", "dest": "/" }]

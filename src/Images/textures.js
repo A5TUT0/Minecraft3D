@@ -1,31 +1,44 @@
-// src/images/textures.js
-import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
-
 import {
   grassImg,
   dirtImg,
   logImg,
   glassImg,
   woodImg,
-  obsidianImg,
-  stoneImg,
+  obsidianImg, // Nueva textura
+  stoneImg, // Nueva textura
 } from "./images.js";
+
+import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
 
 const grassTexture = new TextureLoader().load(grassImg);
 const dirtTexture = new TextureLoader().load(dirtImg);
 const logTexture = new TextureLoader().load(logImg);
 const glassTexture = new TextureLoader().load(glassImg);
 const woodTexture = new TextureLoader().load(woodImg);
-const obsidianTexture = new TextureLoader().load(obsidianImg);
-const stoneTexture = new TextureLoader().load(stoneImg);
+const obsidianTexture = new TextureLoader().load(obsidianImg); // Nueva textura
+const stoneTexture = new TextureLoader().load(stoneImg); // Nueva textura
 
-// Asegúrate de que todas las texturas se exporten
+const groundTexture = new TextureLoader().load(grassImg);
+
+groundTexture.wrapS = RepeatWrapping;
+groundTexture.wrapT = RepeatWrapping;
+
+groundTexture.magFilter = NearestFilter;
+grassTexture.magFilter = NearestFilter;
+dirtTexture.magFilter = NearestFilter;
+logTexture.magFilter = NearestFilter;
+glassTexture.magFilter = NearestFilter;
+woodTexture.magFilter = NearestFilter;
+obsidianTexture.magFilter = NearestFilter; // Nueva textura
+stoneTexture.magFilter = NearestFilter; // Nueva textura
+
 export {
+  groundTexture,
   grassTexture,
   dirtTexture,
   logTexture,
   glassTexture,
   woodTexture,
-  obsidianTexture,
-  stoneTexture,
+  obsidianTexture, // Nueva textura
+  stoneTexture, // Nueva textura
 };

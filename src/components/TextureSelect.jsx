@@ -9,12 +9,6 @@ export const TextureSelector = () => {
     state.texture,
     state.setTexture,
   ]);
-  Object.entries(images).forEach(([imgKey, img]) => {
-    const imgElement = document.createElement("img");
-    imgElement.src = img;
-    imgElement.style.display = "none"; // Ocultamos las imágenes
-    document.body.appendChild(imgElement); // Agrega las imágenes al DOM para que se consideren
-  });
 
   const {
     dirt,

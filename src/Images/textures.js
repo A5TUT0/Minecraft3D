@@ -17,7 +17,6 @@ const glassTexture = new TextureLoader().load(glassImg);
 const woodTexture = new TextureLoader().load(woodImg);
 const obsidianTexture = new TextureLoader().load(obsidianImg);
 const stoneTexture = new TextureLoader().load(stoneImg);
-
 const groundTexture = new TextureLoader().load(grassImg);
 
 groundTexture.wrapS = RepeatWrapping;

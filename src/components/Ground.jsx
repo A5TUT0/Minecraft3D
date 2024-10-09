@@ -1,7 +1,7 @@
 import { usePlane } from "@react-three/cannon";
 import { useStore } from "../hooks/useStore.js";
-import { groundTexture } from "../images/textures.js";
-
+import { groundTexture } from "@/images/textures.js";
+console.log(groundTexture);
 export function Ground() {
   const [ref] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],

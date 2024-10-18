@@ -1,6 +1,6 @@
 import { usePlane } from "@react-three/cannon";
 import { useStore } from "../hooks/useStore.js";
-import { groundTexture } from "@/images/textures.js";
+import { groundTexture } from "@/Images/textures.js";
 console.log(groundTexture);
 export function Ground() {
   const [ref] = usePlane(() => ({
